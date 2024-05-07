@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="CSS/AdoptAPet.css">
+    <title> Browse Available Pets </title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    form {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+<%- include('./partials/header.ejs') %>
+    <script src="/js/PawfectMatch.js"></script>
+    <div class="next">
+        <div class="menu">
+            <ul>
+                <li><a href="PawfectMatch.html">Home</a><br><br></li>
+                <li><a href="findPet.html">Find a dog/cat</a><br><br></li>
+                <li><a href="dogCare.html">Dog Care</a><br><br></li>
+                <li><a href="catCare.html">Cat Care</a><br><br></li>
+                <li><a href="giveAway.html">Have a pet to give away</a><br><br></li>
+                <li><a href="createAnAccount.html">Create an Account</a><br><br></li>
+                <li><a href="logOut">Log Out</a><br><br></li>
+                <li><a href="contactUs.html">Contact Us</a><br><br></li>
+
+            </ul>
+        </div>
+        <div class="main" id="content">
+            <form action="/login" method="POST">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Login">
+        </div>
+    </div>
+    <%- include('./partials/footer') %>
+
+</html>

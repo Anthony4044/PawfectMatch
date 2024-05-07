@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="CSS/AdoptAPet.css">
+    <title> Browse Available Pets </title>
+</head>
+<%- include('./partials/header.ejs') %>
+    <script src="/js/PawfectMatch.js"></script>
+    <div class="next">
+        <div class="menu">
+            <ul>
+                <li><a href="PawfectMatch.html">Home</a><br><br></li>
+                <li><a href="findPet.html">Find a dog/cat</a><br><br></li>
+                <li><a href="dogCare.html">Dog Care</a><br><br></li>
+                <li><a href="catCare.html">Cat Care</a><br><br></li>
+                <li><a href="giveAway.html">Have a pet to give away</a><br><br></li>
+                <li><a href="createAnAccount.html">Create an Account</a><br><br></li>
+                <li><a href="logOut">Log Out</a><br><br></li>
+                <li><a href="contactUs.html">Contact Us</a><br><br></li>
+
+            </ul>
+        </div>
+        <div class="main" id="content">
+            <h2>Create a New Account</h2>
+            <form action="/create-account" method="POST">
+                <label >Username:</label>
+                <input type="text" id="username" name="username"><br>
+                <small>Allowed characters: letters (both upper and lower case) and digits only.</small><br><br>
+        
+                <label>Password:</label>
+                <input type="password" id="password" name="password"><br>
+                <small>Password must be at least 4 characters long, containing at least one letter and one digit.</small><br><br>
+        
+                <button type="submit">Create Account</button>
+            </form>
+           </div>
+    </div>
+    <%- include('./partials/footer') %>
+
+</html>

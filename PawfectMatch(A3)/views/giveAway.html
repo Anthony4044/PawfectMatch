@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="CSS/browseAvailPets.css">
+    <title> Pawfect Match </title>
+</head>
+
+<%- include('./partials/header.ejs') %>
+<div class="next">
+    <div class="menu">
+        <ul>
+            <li><a href="PawfectMatch.html">Home</a><br><br></li>
+            <li><a href="findPet.html">Find a dog/cat</a><br><br></li>
+            <li><a href="dogCare.html">Dog Care</a><br><br></li>
+            <li><a href="catCare.html">Cat Care</a><br><br></li>
+            <li><a href="giveAway.html">Have a pet to give away</a><br><br></li>
+            <li><a href="createAnAccount.html">Create an Account</a><br><br></li>
+            <li><a href="logOut">Log Out</a><br><br></li>
+            <li><a href="contactUs.html">Contact Us</a><br><br></li>
+        </ul>
+    </div>
+    <div class="main">
+        <h1>Animal Form : </h1>
+        <form name="adoptForm" id="adoptForm" action="/give-away" method="POST" >
+            <label>Cat or Dog:</label>
+            <select id="animal" name="animal">
+                <option value="Cat">Cat</option>
+                <option value="Dog">Dog</option>
+            </select>
+
+            <label>Breed:</label>
+            <select name="breed" id="breed">
+                <option>Doesn't matter</option>
+                <option>Bulldog</option>
+                <option>German Shepard</option>
+                <option>Rotweiler</option>
+                <option>Ragdoll</option>
+                <option>Devon Rex</option>
+            </select>
+
+            <label>Age of Animal:</label>
+            <select id="age" name="age">
+                <option>Doesn't matter</option>
+                <option>0 - 1 year</option>
+                <option>2 - 3 years</option>
+                <option>4 - 5 years</option>
+                <option>6+ years</option>
+            </select>
+
+            <label>Animal Gender:</label>
+            <select id="gender" name="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+
+            <label>Compatibility:</label>
+            <select name="compatibility" id = "compatibility">
+                <option>Needs to get along with other dogs</option>
+                <option>Needs to get along with other cats</option>
+                <option>Needs to get along with small children</option>
+                <option>Doesn't matter</option>
+            </select>
+            <label>Comments:</label>
+            <textarea id="comments" name="comments"></textarea>
+
+            <label>Owner's Name:</label>
+            <input type="text" id="ownerName" name="ownerName">
+
+            <label>Owner's Email:</label>
+            <input id="ownerEmail" name="ownerEmail">
+            <br><br>
+
+            <button type="submit" onclick="submitBtn()">Submit</button>
+            <button type="reset">Clear</button>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="/js/giveAway.js"></script>
+<%- include('./partials/footer') %>
+
+</html>
